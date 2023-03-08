@@ -1,0 +1,124 @@
+{
+  "requests": [
+    {
+      "name": "Stepan",
+      "phone": "35355368",
+      "email": "stepan@mail.ru",
+      "id": 1
+    },
+    {
+      "name": "faf",
+      "phone": "412241",
+      "email": "gmail@gmail.com",
+      "id": 2
+    },
+    {
+      "name": "sfasf",
+      "phone": "fafasfa",
+      "email": "faf@gmail.com",
+      "id": 3
+    },
+    {
+      "name": "Matwey",
+      "phone": "89001483800",
+      "email": "xakep.zhuk@gmail.com",
+      "id": 4
+    },
+    {
+      "name": "Max",
+      "phone": "333",
+      "email": "max@gmail.com",
+      "id": 5
+    },
+    {
+      "name": "dima",
+      "phone": "14325",
+      "email": "dimon@gmail.com",
+      "id": 6
+    },
+    {
+      "name": "Bill",
+      "phone": "1383883",
+      "email": "bill@gmail.com",
+      "id": 7
+    },
+    {
+      "name": "my name",
+      "phone": "my number",
+      "email": "gmail@gmail.com",
+      "id": 8
+    }
+  ],
+  "products": [
+    {
+      "img": "img/tiles/pepperoni_tile.jpg",
+      "altimg": "peperoni",
+      "name": "Pizza Peperoni",
+      "price": 6.38,
+      "id": 1
+    },
+    {
+      "img": "img/tiles/vegan-pizza_tile.jpg",
+      "altimg": "vegan",
+      "name": "Pizza Vegan",
+      "price": 7.73,
+      "id": 2
+    },
+    {
+      "img": "img/tiles/margherita_tile.jpg",
+      "altimg": "margherita",
+      "name": "Pizza Margherita",
+      "price": 5.41,
+      "id": 3
+    },
+    {
+      "img": "img/tiles/pizza-mix_tile.jpg",
+      "altimg": "mix",
+      "name": "Pizza Mix",
+      "price": 8.99,
+      "id": 4
+    },
+    {
+      "img": "img/tiles/pizza-hawaiian_tile.jpg",
+      "altimg": "hawaiian",
+      "name": "Hawaiian pizza",
+      "price": 7.13,
+      "id": 5
+    },
+    {
+      "img": "img/tiles/pizza-olives_tile.jpg",
+      "altimg": "pizza_olives",
+      "name": "Olive Pizza",
+      "price": 5.44,
+      "id": 6
+    },
+    {
+      "img": "img/tiles/kids-pizza_tile.jpg",
+      "altimg": "kids_pizza",
+      "name": "Meat Kids pizza",
+      "price": 4.59,
+      "id": 7
+    },
+    {
+      "img": "img/tiles/veg-kidspizza_tile.jpg",
+      "altimg": "veg_kids_pizza",
+      "name": "Veg Kids pizza",
+      "price": 3.67,
+      "id": 8
+    },
+    {
+      "img": "img/tiles/double-cheesepizza_tile.jpg",
+      "altimg": "doublecheese",
+      "name": "Double Cheese",
+      "price": 6.05,
+      "id": 9
+    },
+    {
+      "img": "img/tiles/pizza-mashroom_tile.jpg",
+      "altimg": "mashroom",
+      "name": "Pizza-Mashroom",
+      "price": 6.87,
+      "id": 10
+    }
+  ]
+}

@@ -1,0 +1,183 @@
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Pizza La Vuelta</title>
+	<link rel="stylesheet" href="styles/header.scss">
+	<link rel="stylesheet" href="styles/content.scss">
+	<link rel="stylesheet" href="styles/footer.scss">
+	<link rel="stylesheet" href="styles/sider.scss">
+	<link rel="stylesheet" href="styles/tabs.scss">
+	<link rel="stylesheet" href="styles/tiles.scss">
+	<link rel="stylesheet" href="styles/product.scss">
+	<link rel="stylesheet" href="styles/cart.scss">
+	<link rel="stylesheet" href="styles/modal.scss">
+	<link rel="icon" href="img/header/logotype.png">
+</head>
+
+<body>
+	<div class="wrapper">
+		<header>
+			<div class="header-content">
+				<button class="btn_header" data-cart>
+					<img src="./img/header/shopping-cart.png" alt="cart">
+				</button>
+				<button class="btn_header" data-modal>Contact us</button>
+				<div class="tagline">
+					<p>Pizza la Vuelta.<br> Quickly and Tasty!</p>
+				</div>
+				<div>
+					<img class="picture_pizza" src="img/header/logotype.png" alt="Pizza">
+				</div>
+			</div>
+		</header>
+		<main class="content">
+			<div class="slider_pizzas">
+				<div>
+					<button data-prev class="btn_swipe">
+						<img src="img/slider/arrow-left.png" alt="prev">
+					</button>
+				</div>
+				<div class="slider">
+					<div class="slider-line">
+						<img class="pizzas_in-slides" src="img/slider/pizza-slider_1.jpg" alt="pizza_1">
+						<img class="pizzas_in-slides" src="img/slider/pizza-slider_2.jpg" alt="pizza_2">
+						<img class="pizzas_in-slides" src="img/slider/pizza-slider_3.jpg" alt="pizza_3">
+						<img class="pizzas_in-slides" src="img/slider/pizza-slider_4.jpg" alt="pizza_4">
+					</div>
+				</div>
+				<div>
+					<button data-next class="btn_swipe">
+						<img src="img/slider/arrow-right.png" alt="next">
+					</button>
+				</div>
+			</div>
+			<div class="line">
+				<span>
+					All pizzas for your taste!!!
+				</span>
+			</div>
+			<div class="offer">
+				<div class="title">
+					<h1>Our offers to you:</h1>
+				</div>
+				<div class="descr">
+					<p>
+						Everyone has their own tastes and preferences,<br> no one argues, but we wanna offer you our pizza
+						options:
+					</p>
+				</div>
+				<div class="options">
+					<ul>
+						<li type="circle">
+							Kids pizza - pizza without any fats.<br> That's rather good for children under 12 y.o.
+						</li>
+						<br>
+						<li type="circle">
+							Vegan pizza - pizza, who doesn't like the taste of meat.<br> We add there mushrooms, vegetables and
+							fruit.
+						</li>
+						<br>
+						<li type="circle">
+							Classical meat pizza - pizza for those people,<br> who likes any meat. The most popular option.
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="tabs_pizza">
+				<div class="options_tabs">
+					<div class="tabs-parent">
+						<button class="text__options-tabs text__options_tabs-active">Kids Pizza</button>
+						<button class="text__options-tabs">Vegan Pizza</button>
+						<button class="text__options-tabs">Meat Pizza</button>
+					</div>
+				</div>
+				<img src="img/tabs/kids_pizza_tabs.jpg" alt="pizza_kids" class="pictures_tabs">
+				<img src="img/tabs/vegan_pizza_tabs.jpg" alt="pizza_kids" class="pictures_tabs">
+				<img src="img/tabs/meat_pizza_tabs.jpg" alt="pizza_kids" class="pictures_tabs">
+			</div>
+			<div class="line">
+				<span>
+					Our menu
+				</span>
+			</div>
+			<div class="block_tiles">
+
+			</div>
+	</div>
+	<div class="cart">
+		<div class="close">
+			<button data-close class="img_close">
+				<img src="img/close.png" alt="close">
+			</button>
+		</div>
+		<h1 data-cart-empty style="text-align: center;">Your Cart is empty...</h1>
+		<div data-cart-full class="block-total_price">
+			<p class="text-total_price">Your total price: </p>
+			<span class="current_price">0</span>$
+		</div>
+		<br>
+		<div class="cart_wrapper">
+
+		</div>
+	</div>
+	</main>
+	<footer class="footer_page">
+		<div class="phone_numbers">
+			<p>You can also contact with us:
+				<br> +1 234 567-89-00
+			</p>
+		</div>
+		<div>
+			<img class="pizza" src="img/footer/pizza__footer.png" alt="pizza">
+		</div>
+		<div class="social_networks">
+			<p>We are in social networks:
+				<br>
+				<a href="https://vk.com/zhukmatvey">VK</a>
+				<br>
+				<a href="https://instagram.com/">Instagram</a>
+			</p>
+		</div>
+	</footer>
+	</div>
+	<div class="modal">
+		<div class="modal_dialog">
+			<div class="modal_content">
+				<form action="#">
+					<div class="close">
+						<button data-close class="img_close">
+							<img src="img/close.png" alt="close">
+						</button>
+					</div>
+					<h1 class="modal_title">
+						Sign in, please!
+					</h1>
+					<input required class="inputs_modal" name="name" placeholder="Enter your name..." type="text">
+					<input required class="inputs_modal" name="phone" placeholder="Enter your number..." type="tel">
+					<input required type="email" class="inputs_modal" name="email" placeholder="Enter your email...">
+					<button data-send class="btn_modal">Sign in</button>
+				</form>
+			</div>
+		</div>
+	</div>
+	<div class="cart">
+		<div class="close">
+			<button data-close class="img_close">
+				<img src="img/close.png" alt="close">
+			</button>
+		</div>
+		<h1 data-cart-empty style="text-align: center;">Your Cart is empty...</h1>
+		<div data-cart-full class="block-total_price">
+			<p class="text-total_price">Your total price: </p>
+			<span class="current_price">0</span>$
+		</div>
+		<br>
+		<div class="cart_wrapper"></div>
+	</div>
+	<script src="js/bundle.js"></script>
+</body>
+
+</html>
