@@ -1,68 +1,69 @@
-import { closeModal, openModal } from './modal';
-import { postData } from '../services/services';
+import { closeModal, openModal } from "./modal";
+import { postData } from "../services/services";
 
 const Form = () => {
-	const form = document.querySelector('form');
+  const form = document.querySelector("form");
 
-	const message = {
-		loading: 'img/form/spinner.svg',
-		success: "Thanks for sign in!",
-		error: 'Something went wrong...'
-	};
+  const message = {
+    loading: "img/form/spinner.svg",
+    success: "Thanks for sign in!",
+    error: "Something went wrong...",
+  };
 
-	bindPostData(form);
+  bindPostData(form);
 
-	function bindPostData(form) {
-		form.addEventListener('submit', (e) => {
-			e.preventDefault();
+  function bindPostData(form) {
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
 
-			const statusMessage = document.createElement('img');
-			statusMessage.src = message.loading;
-			statusMessage.style.cssText = `
+      const statusMessage = document.createElement("img");
+      statusMessage.src = message.loading;
+      statusMessage.style.cssText = `
 				display: block;
 				margin: 0 auto;
 			`;
-			form.append(statusMessage);
 
-			const formData = new FormData(form);
+      form.append(statusMessage);
 
-			const json = JSON.stringify(Object.fromEntries(formData.entries()));
+      const formData = new FormData(form);
 
-			postData('http://localhost:3000/requests', json)
-				.then(() => {
-					showThanksModal(message.success);
-					statusMessage.remove();
-				})
-				.catch(() => {
-					showThanksModal(message.error);
-				})
-				.finally(() => {
-					form.reset();
-				});
-		});
-	}
+      const json = JSON.stringify(Object.fromEntries(formData.entries()));
 
-	function showThanksModal(message) {
-		const prevModalDialog = document.querySelector('.modal_dialog');
+      postData("http://localhost:3000/requests", json)
+        .then(() => {
+          showThanksModal(message.success);
+          statusMessage.remove();
+        })
+        .catch(() => {
+          showThanksModal(message.error);
+        })
+        .finally(() => {
+          form.reset();
+        });
+    });
+  }
 
-		prevModalDialog.style.display = 'none';
-		openModal();
+  function showThanksModal(message) {
+    const prevModalDialog = document.querySelector(".modal_dialog");
 
-		const thanksModal = document.createElement('div');
-		thanksModal.classList.add('modal_dialog');
-		thanksModal.innerHTML = `
+    prevModalDialog.style.display = "none";
+    openModal();
+
+    const thanksModal = document.createElement("div");
+    thanksModal.classList.add("modal_dialog");
+    thanksModal.innerHTML = `
 			<div class="modal__dinamic_content">
 				<h1 class="modal_title">${message}</h1>
 			</div>
 		`;
 
-		document.querySelector('.modal').append(thanksModal);
-		setTimeout(() => {
-			thanksModal.remove();
-			prevModalDialog.style.display = 'block';
-			closeModal();
-		}, 3000);
-	}
+    document.querySelector(".modal").append(thanksModal);
+    setTimeout(() => {
+      thanksModal.remove();
+      prevModalDialog.style.display = "block";
+      closeModal();
+    }, 3000);
+  }
 };
 
 export default Form;
