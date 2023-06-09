@@ -19,9 +19,9 @@ const Form = () => {
       const statusMessage = document.createElement("img");
       statusMessage.src = message.loading;
       statusMessage.style.cssText = `
-				display: block;
-				margin: 0 auto;
-			`;
+			display: block;
+			margin: 0 auto;
+		`;
 
       form.append(statusMessage);
 
