@@ -1,43 +1,44 @@
 .slider_pizzas {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	margin: 30px auto;
-	height: 580px;
-	width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 30px auto;
+  height: 580px;
+  width: 100%;
 }
 
 .btn_swipe {
-	width: 100%;
-	height: 579px;
-	padding: 0;
-	background: transparent;
-	border: none;
-	cursor: pointer;
-	transition: 0.3s all;
+  width: 100%;
+  height: 579px;
+  padding: 0;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s all;
 }
 
 .btn_swipe:hover {
-	background-color: rgba(255, 200, 145, 0.3);
-	box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+  background-color: rgba(255, 200, 145, 0.3);
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
+    rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
 }
 
 .pizzas_in-slides {
-	height: 580px;
-	width: 935.17px;
+  height: 580px;
+  width: 935.17px;
 }
 
 .slider-line {
-	display: flex;
-	position: relative;
-	transition: 0.5s all;
-	height: 580px;
-	width: 3740.68px;
-	left: 0;
+  display: flex;
+  position: relative;
+  transition: 0.5s all;
+  height: 580px;
+  width: 3740.68px;
+  left: 0;
 }
 
 .slider {
-	overflow: hidden;
-	height: 580px;
-	width: 935.17px;
+  overflow: hidden;
+  height: 580px;
+  width: 935.17px;
 }

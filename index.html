@@ -19,6 +19,8 @@
 
 <body>
 	<div class="wrapper">
+
+		<!-- Header -->
 		<header>
 			<div class="header-content">
 				<button class="btn_header" data-cart>
@@ -33,7 +35,11 @@
 				</div>
 			</div>
 		</header>
+
+		<!-- Main -->
 		<main class="content">
+
+			<!-- Slider -->
 			<div class="slider_pizzas">
 				<div>
 					<button data-prev class="btn_swipe">
@@ -54,11 +60,15 @@
 					</button>
 				</div>
 			</div>
+
+			<!-- Line -->
 			<div class="line">
 				<span>
 					All pizzas for your taste!!!
 				</span>
 			</div>
+
+			<!-- Offer -->
 			<div class="offer">
 				<div class="title">
 					<h1>Our offers to you:</h1>
@@ -86,6 +96,8 @@
 					</ul>
 				</div>
 			</div>
+
+			<!-- Tabs -->
 			<div class="tabs_pizza">
 				<div class="options_tabs">
 					<div class="tabs-parent">
@@ -107,23 +119,9 @@
 
 			</div>
 	</div>
-	<div class="cart">
-		<div class="close">
-			<button data-close class="img_close">
-				<img src="img/close.png" alt="close">
-			</button>
-		</div>
-		<h1 data-cart-empty style="text-align: center;">Your Cart is empty...</h1>
-		<div data-cart-full class="block-total_price">
-			<p class="text-total_price">Your total price: </p>
-			<span class="current_price">0</span>$
-		</div>
-		<br>
-		<div class="cart_wrapper">
-
-		</div>
-	</div>
 	</main>
+
+	<!-- Footer -->
 	<footer class="footer_page">
 		<div class="phone_numbers">
 			<p>You can also contact with us:
@@ -143,6 +141,8 @@
 		</div>
 	</footer>
 	</div>
+
+	<!-- Modal -->
 	<div class="modal">
 		<div class="modal_dialog">
 			<div class="modal_content">
@@ -163,12 +163,15 @@
 			</div>
 		</div>
 	</div>
+
+	<!-- Cart -->
 	<div class="cart">
 		<div class="close">
 			<button data-close class="img_close">
 				<img src="img/close.png" alt="close">
 			</button>
 		</div>
+		<button class="clear">Clear cart</button>
 		<h1 data-cart-empty style="text-align: center;">Your Cart is empty...</h1>
 		<div data-cart-full class="block-total_price">
 			<p class="text-total_price">Your total price: </p>
@@ -176,8 +179,12 @@
 		</div>
 		<br>
 		<div class="cart_wrapper"></div>
-		<a href="#products" class="navigation"><img src="./img/down.png" alt="down"></a>
 	</div>
+
+	<!-- Navigation -->
+	<a href="#products" class="navigation"><img src="./img/down.png" alt="down"></a>
+
+	<!-- Script -->
 	<script src="js/bundle.js"></script>
 </body>
 

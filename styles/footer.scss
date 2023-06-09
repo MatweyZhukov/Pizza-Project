@@ -1,27 +1,32 @@
 .footer_page {
-	width: 100%;
-	background: linear-gradient(to top, #ffc8a8, #ffd4bb, #ffe5d7, rgb(255, 246, 231));
-	font-size: 25px;
-	align-items: left;
-	align-items: center;
-	display: flex;
-	justify-content: space-evenly;
+  width: 100%;
+  background: linear-gradient(
+    to top,
+    #ffc8a8,
+    #ffd4bb,
+    #ffe5d7,
+    rgb(255, 246, 231)
+  );
+  font-size: 25px;
+  align-items: left;
+  align-items: center;
+  display: flex;
+  justify-content: space-evenly;
 
-	.phone_numbers {
-		text-align: left;
-	}
+  .phone_numbers {
+    text-align: left;
+  }
 
-	.pizza {
-		width: 120px;
-	}
+  .pizza {
+    width: 120px;
+  }
 
-	.social_networks {
-		text-align: right;
-
-	}
+  .social_networks {
+    text-align: right;
+  }
 }
 
 a {
-	text-decoration: underline;
-	color: black;
+  text-decoration: underline;
+  color: black;
 }

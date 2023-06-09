@@ -41,6 +41,12 @@
       "phone": "1383883",
       "email": "bill@gmail.com",
       "id": 7
+    },
+    {
+      "name": "StepanSecond",
+      "phone": "89001483800",
+      "email": "stepan@yandex.ru",
+      "id": 8
     }
   ],
   "products": [

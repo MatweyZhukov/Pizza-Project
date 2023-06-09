@@ -1,54 +1,55 @@
 .block_tiles {
-	display: flex;
-	justify-content: space-evenly;
-	flex-wrap: wrap;
-	margin: 0 auto;
-	width: 1360px;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  width: 1360px;
 }
 
 .tiles {
-	display: flex;
-	justify-content: space-around;
-	align-items: center;
-	width: 680px;
-	height: 180px;
-	border: 1px solid rgb(0, 0, 0, 0.1);
-	transition: 0.3s all;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 680px;
+  height: 180px;
+  border: 1px solid rgb(0, 0, 0, 0.1);
+  transition: 0.3s all;
 }
 
 .tiles:hover {
-	box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
-	transition: 0.3s all;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+  transition: 0.3s all;
 }
 
 .tile_img {
-	width: 200px;
-	border-radius: 3px;
+  width: 200px;
+  border-radius: 3px;
 }
 
 .tile_text {
-	text-align: center;
-	font-size: 20px;
+  text-align: center;
+  font-size: 20px;
 }
 
 .price {
-	font-size: 20px;
-	font-weight: bold;
+  font-size: 20px;
+  font-weight: bold;
 }
 
 .tile_add {
-	border-radius: 5px;
-	background-color: #ffceb1;
-	border: 1px solid rgb(0, 0, 0, .2);
-	font-size: 20px;
-	font-weight: lighter;
-	cursor: pointer;
-	height: 40px;
-	transition: 0.3s all;
+  border-radius: 5px;
+  background-color: #ffceb1;
+  border: 1px solid rgb(0, 0, 0, 0.2);
+  font-size: 20px;
+  font-weight: lighter;
+  cursor: pointer;
+  height: 40px;
+  transition: 0.3s all;
 }
 
 .tile_add:hover {
-	transition: 0.3s all;
-	box-shadow: rgba(0, 0, 0, 0.35) 0px -2px 6px 0px inset;
-	transform: translateY(1px);
+  transition: 0.3s all;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px -2px 6px 0px inset;
+  transform: translateY(1px);
 }
