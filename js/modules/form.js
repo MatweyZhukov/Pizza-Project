@@ -1,9 +1,12 @@
+//Importing fetch functions for data
 import { closeModal, openModal } from "./modal";
 import { postData } from "../services/services";
 
 const Form = () => {
+  //Getting form from the page
   const form = document.querySelector("form");
 
+  //Messages for form
   const message = {
     loading: "img/form/spinner.svg",
     success: "Thanks for sign in!",
@@ -12,6 +15,7 @@ const Form = () => {
 
   bindPostData(form);
 
+  //Posting data from user
   function bindPostData(form) {
     form.addEventListener("submit", (e) => {
       e.preventDefault();
@@ -43,6 +47,7 @@ const Form = () => {
     });
   }
 
+  //Showing modal window for user
   function showThanksModal(message) {
     const prevModalDialog = document.querySelector(".modal_dialog");
 

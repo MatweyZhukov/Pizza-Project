@@ -1,11 +1,14 @@
 const Slider = () => {
+  //Elements
   const slideNext = document.querySelector("[data-next]"),
     slidePrev = document.querySelector("[data-prev]"),
     sliderLine = document.querySelector(".slider-line");
 
+  //Function max and min offset
   function slider(next, prev, line) {
     let offset = 0;
 
+    //Slide our slider to left
     function slideLeft() {
       offset += 935.17;
 
@@ -16,6 +19,7 @@ const Slider = () => {
       line.style.left = -offset + "px";
     }
 
+    //Slide our slider to right
     function slideRight() {
       offset -= 935.17;
 
@@ -26,6 +30,7 @@ const Slider = () => {
       line.style.left = -offset + "px";
     }
 
+    //EventListeners
     next.addEventListener("click", () => {
       slideLeft();
     });

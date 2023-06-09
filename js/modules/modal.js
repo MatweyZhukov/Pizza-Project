@@ -1,9 +1,14 @@
+//Importing function from module Cart
+import { closeCart } from "./cart";
+
+//Elements
 const btnOpenModal = document.querySelector("[data-modal]"),
   inputs = document.querySelectorAll(".inputs_modal"),
   modal = document.querySelector(".modal"),
   btnClose = document.querySelectorAll("[data-close]"),
   modalContent = document.querySelector(".modal_content");
 
+//Function openning modal
 function openModal() {
   modal.style.cssText = `
 		opacity: 1;
@@ -17,6 +22,7 @@ function openModal() {
   document.body.style.overflow = "hidden";
 }
 
+//Function closing modal
 function closeModal() {
   modal.style.cssText = `
 		opacity: 0;
@@ -30,6 +36,7 @@ function closeModal() {
   document.body.style.overflow = "";
 }
 
+//Function clearing inputs, when the modal is closed
 function clearInputs() {
   inputs.forEach((item) => {
     item.value = "";
@@ -37,6 +44,7 @@ function clearInputs() {
 }
 
 const Modal = () => {
+  //EventListeners
   btnClose.forEach((item) => {
     item.addEventListener("click", (e) => {
       e.preventDefault();
@@ -48,6 +56,7 @@ const Modal = () => {
   btnOpenModal.addEventListener("click", (e) => {
     e.preventDefault();
     openModal();
+    closeCart();
   });
 
   window.addEventListener("click", (e) => {
