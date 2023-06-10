@@ -7,7 +7,6 @@ import Modal from "./modules/modal";
 import Products from "./modules/products";
 import Slider from "./modules/slider";
 import Tabs from "./modules/tabs";
-import Navigation from "./modules/navigation";
 
 //EventListener
 window.addEventListener("DOMContentLoaded", () => {
@@ -18,5 +17,4 @@ window.addEventListener("DOMContentLoaded", () => {
   Products();
   Slider();
   Tabs();
-  Navigation();
 });

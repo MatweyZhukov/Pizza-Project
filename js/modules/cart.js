@@ -45,9 +45,8 @@ const Cart = () => {
 
     itemsCart.forEach((item) => {
       const amountEl = item.querySelector("[data-counter]").innerText,
-        priceEl = item.querySelector("[data-price]").innerText;
-
-      const currentPrice = +amountEl * +priceEl;
+        priceEl = item.querySelector("[data-price]").innerText,
+        currentPrice = +amountEl * +priceEl;
 
       totalPrice += currentPrice;
     });
@@ -61,11 +60,12 @@ const Cart = () => {
       const card = e.target.closest(".tiles");
 
       const tileInfo = {
-        id: card.dataset.id,
-        imgSrc: card.querySelector(".tile_img").getAttribute("src"),
-        title: card.querySelector(".tile_text").innerText,
-        price: card.querySelector("[data-price]").innerText,
-      };
+          id: card.dataset.id,
+          imgSrc: card.querySelector(".tile_img").getAttribute("src"),
+          title: card.querySelector(".tile_text").innerText,
+          price: card.querySelector("[data-price]").innerText,
+        },
+        { id, imgSrc, title, price } = tileInfo;
 
       const itemInCart = cartWrapper.querySelector(
         `[data-id='${tileInfo.id}']`
@@ -76,10 +76,10 @@ const Cart = () => {
         counterElement.innerText < 10 ? counterElement.innerText++ : null;
       } else {
         let cardItemHtml = `
-				<div data-id="${tileInfo.id}" class="product">
-					<img class="product_img" src="${tileInfo.imgSrc}" alt="product" class="product_img">
+				<div id="${id}" class="product">
+					<img class="product_img" src="${imgSrc}" alt="product" class="product_img">
 					<div class="block-name_btns">
-						<p class="product_name">${tileInfo.title}</p>
+						<p class="product_name">${title}</p>
 					<div class="block-btns_counter">
 						<button data-action="minus" class="current_btns">-</button>
 						<div data-counter class="product_counter">1</div>
@@ -87,12 +87,18 @@ const Cart = () => {
 					</div>
 					</div>
 						<div class="block-cart_price">
-						<p class="price"><span data-price>${tileInfo.price}</span>$</p>
+						<p class="price"><span data-price>${price}</span>$</p>
 					</div>
 				</div>
 			`;
 
         cartWrapper.insertAdjacentHTML("beforeend", cardItemHtml);
+        document.querySelectorAll(".product").forEach((item) => {
+          const add = setTimeout(() => {
+            item.style.opacity = 1;
+            clearTimeout(add);
+          });
+        });
         openCart();
       }
       toggleCartStatus();
@@ -121,8 +127,12 @@ const Cart = () => {
       counter.innerText = --counter.innerText;
 
       if (e.target.closest(".product") && parseInt(counter.innerText) === 0) {
-        e.target.closest(".product").remove();
-        toggleCartStatus();
+        e.target.closest(".product").style.opacity = 0;
+        const remove = setTimeout(() => {
+          e.target.closest(".product").remove();
+          toggleCartStatus();
+          clearTimeout(remove);
+        }, 300);
       }
       calcCartPrice();
     }

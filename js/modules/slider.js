@@ -11,22 +11,18 @@ const Slider = () => {
     //Slide our slider to left
     function slideLeft() {
       offset += 935.17;
-
       if (offset > 2805.51) {
         offset = 0;
       }
-
       line.style.left = -offset + "px";
     }
 
     //Slide our slider to right
     function slideRight() {
       offset -= 935.17;
-
       if (offset < 0) {
         offset = 2805.51;
       }
-
       line.style.left = -offset + "px";
     }
 

@@ -26,12 +26,10 @@ const Form = () => {
 			display: block;
 			margin: 0 auto;
 		`;
-
       form.append(statusMessage);
 
-      const formData = new FormData(form);
-
-      const json = JSON.stringify(Object.fromEntries(formData.entries()));
+      const formData = new FormData(form),
+        json = JSON.stringify(Object.fromEntries(formData.entries()));
 
       postData("http://localhost:3000/requests", json)
         .then(() => {
