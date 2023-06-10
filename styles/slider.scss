@@ -17,6 +17,14 @@
   transition: 0.3s all;
 }
 
+[data-prev] {
+  border-radius: 10px 0 0 10px;
+}
+
+[data-next] {
+  border-radius: 0 10px 10px 0;
+}
+
 .btn_swipe:hover {
   background-color: rgba(255, 200, 145, 0.3);
   box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
