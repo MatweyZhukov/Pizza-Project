@@ -60,23 +60,22 @@ const Cart = () => {
       const card = e.target.closest(".tiles");
 
       const tileInfo = {
-          id: card.dataset.id,
-          imgSrc: card.querySelector(".tile_img").getAttribute("src"),
-          title: card.querySelector(".tile_text").innerText,
-          price: card.querySelector("[data-price]").innerText,
-        },
-        { id, imgSrc, title, price } = tileInfo;
+        id: card.dataset.id,
+        imgSrc: card.querySelector(".tile_img").getAttribute("src"),
+        title: card.querySelector(".tile_text").innerText,
+        price: card.querySelector("[data-price]").innerText,
+      };
 
-      const itemInCart = cartWrapper.querySelector(
-        `[data-id='${tileInfo.id}']`
-      );
+      const { id, imgSrc, title, price } = tileInfo;
+
+      const itemInCart = cartWrapper.querySelector(`[data-id='${id}']`);
 
       if (itemInCart) {
         const counterElement = itemInCart.querySelector("[data-counter]");
         counterElement.innerText < 10 ? counterElement.innerText++ : null;
       } else {
         let cardItemHtml = `
-				<div id="${id}" class="product">
+				<div data-id="${id}" class="product">
 					<img class="product_img" src="${imgSrc}" alt="product" class="product_img">
 					<div class="block-name_btns">
 						<p class="product_name">${title}</p>

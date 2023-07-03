@@ -12,7 +12,6 @@ const Products = () => {
       this.id = id;
       this.classes = classes;
       this.parent = document.querySelector(parentSelector);
-      this.transfer = 27;
     }
 
     render() {
